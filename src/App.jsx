@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen md:w-full w-fit relative bg-[#000000]">
+    <div className="min-h-screen w-full relative bg-[#000000]">
       <div
         className="inset-0 z-0 absolute"
         style={{
@@ -49,9 +49,9 @@ function App() {
             "radial-gradient(ellipse 100% 30% at 0% 0%, #000 30%, transparent 100%)",
         }}
       />
-
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <Navbar />
+<Navbar />
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
+        
         <Hero />
         <Skills />
         <Projects />

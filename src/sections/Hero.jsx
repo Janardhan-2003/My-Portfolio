@@ -32,16 +32,16 @@ const socialLinks = [
 const Hero = () => {
   return (
     <>
-      <section id="hero" className="flex">
-        <div className="px-2 md:px-3">
-          <div className="p-8 md:p-12">
-            <div className="flex flex-row items-center md:items-start gap-4">
+      <section id="hero" className="flex flex-col sm:flex-row">
+        <div className="md:px-3 w-full">
+          <div className="py-6 md:p-4">
+            <div className="flex flex-row sm:flex-row items-center md:items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="relative">
                   <img
                     src={profile}
                     alt="Profile"
-                    className="w-26 h-26 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-500/30 shadow-xl"
+                    className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-500/30 shadow-xl"
                   />
                 </div>
               </div>
@@ -66,13 +66,13 @@ const Hero = () => {
                   </svg>
                 </div>
 
-                <p className="text-sm md:text-xl text-gray-300 mb-6">
+                <p className="text-sm md:text-xl text-gray-300 mb-6 leading-relaxed">
                   Full Stack Developer
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4 mt-8 flex-1 text-md text-gray-300 font-serif text-left">
+            <div className="space-y-4 mt-8 flex-1 text-sm sm:text-md text-gray-300 font-serif text-left leading-relaxed break-words">
               <p>
                 Hey there, I’m a Spotify-powered problem solver who talks to computers
                 until they listen. Skilled in MERN, AI,
@@ -96,7 +96,7 @@ const Hero = () => {
               <div className="flex mt-2 py-3 gap-2">
                 {socialLinks.map((each, index) => (
                   <a
-                    className="text-black bg-sky-50 text-3xl flex justify-center items-center px-3 rounded-2xl scale-90 hover:scale-85 hover:bg-gray-300 transition-transform duration-200"
+                    className="text-black bg-sky-50 text-2xl sm:text-3xl flex justify-center items-center px-3 rounded-2xl scale-95 hover:scale-100 hover:bg-gray-300 transition-transform duration-200"
                     href={each.link}
                     key={index}
                     target="_blank"
@@ -111,7 +111,7 @@ const Hero = () => {
                 <a
                   href={Resume}
                   download
-                  className="bg-sky-50 py-3 px-4 text-black rounded-2xl flex justify-center gap-2 scale-90 hover:scale-85 hover:bg-gray-300 transition-transform duration-200"
+                  className="bg-sky-50 py-3 px-4 text-black rounded-2xl flex justify-center gap-2 scale-95 hover:scale-100 hover:bg-gray-300 transition-transform duration-200"
                 >
                   <FileText />
                   <span>Resume</span>

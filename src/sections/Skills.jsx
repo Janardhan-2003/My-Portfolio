@@ -182,23 +182,21 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="flex flex-col md:px-15 px-10">
+    <section id="skills" className="flex flex-col sm:px-6 lg:px-8">
       <div>
         <h1 className="text-white font-sans text-2xl font-medium">Technical Skills</h1>
       </div>
 
       <div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-4 mb-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 mt-4 mb-4">
           {skills.map((skill) => (
-            <a
+            <div
               key={skill.name}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md hover:shadow-xl border border-gray-700 hover:border-sky-400 transition-transform duration-200 cursor-text"
+              className="flex justify-center items-center space-x-2 py-2 rounded-lg shadow-md hover:shadow-xl border border-gray-700 hover:border-sky-400 transition-transform duration-200 cursor-default"
             >
               <skill.icon color={skill.color} />
-              <span className="text-sm text-white">{skill.name}</span>
-            </a>
+              <span className="text-xs sm:text-sm text-white">{skill.name}</span>
+            </div>
           ))}
         </div>
       </div>

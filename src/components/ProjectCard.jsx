@@ -10,13 +10,13 @@ const ProjectCard = (props) => {
         <img
           src={url}
           alt={title}
-          className="rounded-t-2xl hover:scale-105 w-full object-cover opacity-70 hover:opacity-100 transition-tranform  duration-300"
+          className="rounded-t-2xl hover:scale-105 w-full aspect-video object-cover opacity-70 hover:opacity-100 transition-transform duration-300"
         />
       </div>
 
       <div className="p-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-white font-sans text-xl font-medium mt-2 hover:text-sky-400 transition-colors duration-200 cursor-pointer">
+          <h1 className="text-white font-sans text-lg sm:text-xl font-medium mt-2 hover:text-sky-400 transition-colors duration-200 cursor-pointer">
             {title}
           </h1>
           <div className="flex space-x-4">

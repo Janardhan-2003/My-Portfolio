@@ -121,13 +121,12 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <div className="max-w-4xl w-auto mx-0 " id="projects">
+      <div className="max-w-4xl w-full mx-auto sm:px-6 lg:px-8" id="projects">
         <div>
-          <h1 className="text-white my-4 px-10 md:px-15 text-2xl font-medium">Featured Projects</h1>
+          <h1 className="text-white my-4 text-2xl font-medium">Featured Projects</h1>
         </div>
         <div
-          className="grid md:grid-cols-2 gap-6 px-10 md:px-15"
-          id="projects"
+          className="grid md:grid-cols-2 gap-6"
         >
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
