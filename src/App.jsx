@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import Footer from "./components/Footer";
@@ -6,6 +7,32 @@ import Projects from "./sections/Projects";
 import Education from "./sections/Education";
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/scripts/oneko.js";
+    script.async = true;
+    
+    // Add error handling
+    script.onerror = () => {
+      console.warn("Failed to load oneko.js script");
+    };
+    
+    document.body.appendChild(script);
+    
+    return () => {
+      // Clean up the script safely
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
+      
+      // Clean up the oneko element if it exists
+      const onekoEl = document.getElementById("oneko");
+      if (onekoEl) {
+        onekoEl.remove();
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen md:w-full w-fit relative bg-[#000000]">
       <div
