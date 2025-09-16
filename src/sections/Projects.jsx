@@ -121,7 +121,7 @@ const projects = [
 const Projects = () => {
   return (
     <>
-      <div className="max-w-4xl w-auto mx-0 ">
+      <div className="max-w-4xl w-auto mx-0 " id="projects">
         <div>
           <h1 className="text-white my-4 px-10 md:px-15 text-2xl font-medium">Featured Projects</h1>
         </div>

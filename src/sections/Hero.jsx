@@ -32,7 +32,7 @@ const socialLinks = [
 const Hero = () => {
   return (
     <>
-      <section id="hero" className="flex pt-15">
+      <section id="hero" className="flex">
         <div className="px-2 md:px-3">
           <div className="p-8 md:p-12">
             <div className="flex flex-row items-center md:items-start gap-4">
@@ -74,9 +74,9 @@ const Hero = () => {
 
             <div className="space-y-4 mt-8 flex-1 text-md text-gray-300 font-serif text-left">
               <p>
-                I’m a Spotify-powered problem solver who talks to computers
+                Hey there, I’m a Spotify-powered problem solver who talks to computers
                 until they listen. Skilled in MERN, AI,
-                <br /> and debugging at 3 AM, I turn “impossible” into side
+                and debugging at 3 AM, I turn “impossible” into side
                 projects.
               </p>
               <p>

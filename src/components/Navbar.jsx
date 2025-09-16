@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { GiThunderball } from "react-icons/gi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +14,20 @@ const Navbar = () => {
         block: "start",
       });
     }
-    setIsOpen(false); // Close mobile menu after clicking
+    setIsOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-transparent">
-      <div className="max-w-4xl mx-auto px-14 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-white font-serif">Janardhan.</h1>
+    <nav className=" top-0 left-0 z-50 w-full bg-transparent">
+      <div className="max-w-4xl mx-auto px-10 md:px-15 py-8 flex justify-between items-center">
+        <a href="#hero"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("hero");
+              }} className="flex items-center ">
+        <h1 className="text-xl font-bold text-white font-serif">Janardhan</h1>
+        <GiThunderball className="text-white text-xl"/>
+        </a>
 
         <ul className="hidden md:flex space-x-8 text-white font-medium">
           <li>
