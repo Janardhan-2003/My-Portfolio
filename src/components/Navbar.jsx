@@ -30,7 +30,7 @@ const Navbar = () => {
                 e.preventDefault();
                 scrollToSection("skills");
               }}
-              className="hover:text-blue-400 cursor-pointer transition"
+              className="hover:text-sky-400 cursor-pointer transition"
             >
               Skills
             </a>
@@ -49,28 +49,17 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#blog"
+              href="#education"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("blog");
+                scrollToSection("education");
               }}
               className="hover:text-blue-400 cursor-pointer transition"
             >
-              Blog
+              Education
             </a>
           </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("contact");
-              }}
-              className="hover:text-blue-400 cursor-pointer transition"
-            >
-              Contact
-            </a>
-          </li>
+
         </ul>
       </div>
     </nav>

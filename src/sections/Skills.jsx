@@ -183,12 +183,12 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="flex flex-col md:px-15 px-10">
-      <div className="px-2">
+      <div>
         <h1 className="text-white font-sans text-2xl font-medium">Technical Skills</h1>
       </div>
 
       <div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-4 mb-4">
           {skills.map((skill) => (
             <a
               key={skill.name}

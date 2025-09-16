@@ -1,14 +1,13 @@
-// src/App.jsx
-
-import Navbar from './components/Navbar'
-import Hero from './sections/Hero'
-import Footer from './components/Footer';
-import Skills from './sections/Skills'; 
-
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import Footer from "./components/Footer";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Education from "./sections/Education";
 
 function App() {
   return (
-    <div className="min-h-screen w-full relative bg-[#000000]">
+    <div className="min-h-screen md:w-full w-fit relative bg-[#000000]">
       <div
         className="inset-0 z-0 absolute"
         style={{
@@ -18,20 +17,20 @@ function App() {
           `,
           backgroundSize: "30px 30px",
           WebkitMaskImage:
-            "radial-gradient(ellipse 90% 90% at 0% 0%, #000 60%, transparent 100%)",
+            "radial-gradient(ellipse 100% 30% at 0% 0%, #000 30%, transparent 100%)",
           maskImage:
-            "radial-gradient(ellipse 90% 90% at 0% 0%, #000 90%, transparent 100%)",
+            "radial-gradient(ellipse 100% 30% at 0% 0%, #000 30%, transparent 100%)",
         }}
       />
 
-      {/* Page Content */}
-      <div className='relative z-10 max-w-4xl mx-auto'>
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Footer />
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <Navbar />
+        <Hero />
+        <Skills />
+        <Projects />
+        <Education />
       </div>
-      
+      <Footer />
     </div>
   );
 }

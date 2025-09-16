@@ -1,13 +1,39 @@
 import React from "react";
 import { FileText } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
 import profile from "../assets/profile.jpg";
-import Resume from "../../public/Janardhan Reddy.pdf";
+import Resume from "../assets/Janardhan Reddy.pdf";
+
+const socialLinks = [
+  {
+    title: "GitHub",
+    icon: FaGithub,
+    link: "https://github.com/janardhan-2003",
+  },
+  {
+    title: "LinkedIn",
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/kokatam-janardhan-reddy",
+  },
+  {
+    title: "Twitter",
+    icon: FaXTwitter,
+    link: "https://x.com/Jana_kokatam9",
+  },
+  {
+    title: "Twitter",
+    icon: IoMail,
+    link: "mailto:jrkokatam.09@gmail.com",
+  },
+];
 
 const Hero = () => {
   return (
     <>
       <section id="hero" className="flex pt-15">
-        <div className="px-2">
+        <div className="px-2 md:px-3">
           <div className="p-8 md:p-12">
             <div className="flex flex-row items-center md:items-start gap-4">
               <div className="flex-shrink-0">
@@ -15,13 +41,13 @@ const Hero = () => {
                   <img
                     src={profile}
                     alt="Profile"
-                    className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-500/30 shadow-xl"
+                    className="w-26 h-26 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-500/30 shadow-xl"
                   />
                 </div>
               </div>
 
-              <div className="flex-1 text-left mt-10">
-                <div className="flex items-center justify-start gap-3 mb-2">
+              <div className="flex-1 text-left md:mt-10">
+                <div className="flex items-center justify-start gap-2 ">
                   <h1 className="text-2xl md:text-4xl font-bold text-white">
                     Janardhan Reddy
                   </h1>
@@ -40,7 +66,7 @@ const Hero = () => {
                   </svg>
                 </div>
 
-                <p className="text-md md:text-xl text-gray-300 mb-6">
+                <p className="text-sm md:text-xl text-gray-300 mb-6">
                   Full Stack Developer
                 </p>
               </div>
@@ -62,19 +88,35 @@ const Hero = () => {
                 Always curious, always experimenting, I thrive on challenges
                 that push limits, and I’m on a mission to
                 <br />
-                craft tech that’s not just functional, but unforgettable. Wrote by AI.
+                craft tech that’s not just functional, but unforgettable. Wrote
+                by AI.
               </p>
             </div>
-
-            <div>
-              <a
-                href="/resume.pdf"
-                download
-                className="bg-sky-50 mt-6 py-3 w-60 text-black rounded-2xl flex justify-center gap-2 scale-100 hover:scale-95 hover:bg-gray-300 transition-transform duration-200"
-              >
-                <FileText />
-                Download my Resume
-              </a>
+            <div className="flex gap-2">
+              <div className="flex mt-2 py-3 gap-2">
+                {socialLinks.map((each, index) => (
+                  <a
+                    className="text-black bg-sky-50 text-3xl flex justify-center items-center px-3 rounded-2xl scale-90 hover:scale-85 hover:bg-gray-300 transition-transform duration-200"
+                    href={each.link}
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={each.title}
+                  >
+                    <each.icon />
+                  </a>
+                ))}
+              </div>
+              <div className="mt-2 py-3 gap-2 ">
+                <a
+                  href={Resume}
+                  download
+                  className="bg-sky-50 py-3 px-4 text-black rounded-2xl flex justify-center gap-2 scale-90 hover:scale-85 hover:bg-gray-300 transition-transform duration-200"
+                >
+                  <FileText />
+                  <span>Resume</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
